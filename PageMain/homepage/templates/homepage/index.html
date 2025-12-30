@@ -1,0 +1,316 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quenchmark - Where Technology, Security, Travel & Markets Come Together</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="background-video" id="backgroundVideo">
+        <source src="{% static 'images/Background_Video.mp4' %}" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    
+    <!-- Horizontal Top Navigation Bar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="nav-logo">
+            <img src="{% static 'images/QM_logo.svg' %}" alt="Quenchmark" class="nav-logo-img">
+        </div>
+        <ul class="nav-menu">
+            <li class="has-dropdown">
+                <a href="#company" class="nav-link">Company</a>
+                <ul class="dropdown">
+                    <li class="has-submenu">
+                        <a href="/company" class="dropdown-link">Company</a>
+                        <ul class="submenu">
+                            <li><a href="/company/leadership" class="submenu-link">Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/brands" class="dropdown-link">Brands</a>
+                        <ul class="submenu">
+                            <li><a href="https://tripsoul.com" target="_blank" class="submenu-link">TripSoul</a></li>
+                            <li><a href="https://parameterx.com" target="_blank" class="submenu-link">ParameterX</a></li>
+                            <li><a href="https://quantmentor.com" target="_blank" class="submenu-link">QuantMentor</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/policies" class="dropdown-link">Policies</a></li>
+                    <li><a href="/licencing" class="dropdown-link">Licencing</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#careers" class="nav-link">Careers</a>
+                <ul class="dropdown">
+                    <li class="has-submenu">
+                        <a href="/careers" class="dropdown-link">Careers</a>
+                        <ul class="submenu">
+                            <li><a href="/careers/how-we-work" class="submenu-link">How we work</a></li>
+                            <li><a href="/careers/our-culture" class="submenu-link">Our Culture</a></li>
+                            <li><a href="/careers/professional-development" class="submenu-link">Professional Development</a></li>
+                            <li><a href="/careers/candidate-experience" class="submenu-link">The Candidate Experience</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/careers/search-jobs" class="dropdown-link">Search Jobs</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#news" class="nav-link">News & Policies</a>
+                <ul class="dropdown">
+                    <li class="has-submenu">
+                        <a href="/stories" class="dropdown-link">Stories</a>
+                        <ul class="submenu">
+                            <li><a href="/stories/videos" class="submenu-link">Videos</a></li>
+                            <li><a href="/stories/hear-from-leaders" class="submenu-link">Hear from leaders</a></li>
+                            <li><a href="/stories/snapshots" class="submenu-link">Snapshots</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/media-library" class="dropdown-link">Media Library</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#contact" class="nav-link" data-section="contact">Contact Us</a>
+                <ul class="dropdown">
+                    <li><a href="/contact" class="dropdown-link">Contacts</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Intro Section with Staggered Headline -->
+        <section class="intro-section" id="hero" data-section="hero">
+            <div class="intro-content">
+                <div class="hero-text-container">
+                    <h1 class="hero-word"><span>Where</span></h1>
+                    <h1 class="hero-word"><span>Technology,</span></h1>
+                    <h1 class="hero-word"><span>Security,</span></h1>
+                    <h1 class="hero-word"><span>Travel</span></h1>
+                    <h1 class="hero-word"><span>& Markets Come Together</span></h1>
+                    <h1 class="hero-word"><span>Quenchmark</span></h1>
+                </div>
+                <div class="hero-logo-container">
+                    <img src="{% static 'images/Just_QM.svg' %}" alt="Quenchmark" class="hero-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Motion Showcase - Pinned Wrapper -->
+        <div class="motion-showcase" id="motionShowcase">
+            <!-- Motion Block 1: About -->
+            <div class="motion-block" data-block="1">
+                <div class="motion-stage">
+                    <div class="motion-media">
+                        <div class="motion-content">
+                            <h2 class="section-title">Quenchmark</h2>
+                            <p class="section-description">
+                                Quenchmark is a next-generation innovation company that builds and operates high-impact ventures across travel, cybersecurity, and financial markets. We don't just create companies — we create solutions that move industries forward.
+                            </p>
+                            <div class="mission-box glass-box">
+                                <h3 class="mission-title">Our mission is simple:</h3>
+                                <p class="mission-text">Solve real-world problems using technology, research, and execution.</p>
+                            </div>
+                            <p class="section-description">
+                                Quenchmark is the parent company behind three powerful brands, each built to dominate its own domain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motion Block 2: Ecosystem -->
+            <div class="motion-block" data-block="2">
+                <div class="motion-stage">
+                    <div class="motion-media">
+                        <div class="motion-content">
+                            <h2 class="section-title">Our Ecosystem</h2>
+                            <div class="companies-carousel-wrapper">
+                                <div class="companies-carousel" id="companiesCarousel">
+                                    <a href="https://tripsoul.com" target="_blank" class="company-card" data-company="tripsoul">
+                                        <div class="company-logo-link">
+                                            <img src="{% static 'images/tripsoul-logo.svg' %}" alt="TripSoul" class="company-logo">
+                                        </div>
+                                        <h3 class="company-name">TripSoul</h3>
+                                        <p class="company-tagline">Smart Travel. Real Experiences.</p>
+                                        <p class="company-description">
+                                            TripSoul is our travel solutions brand that delivers intelligent, end-to-end trip experiences.
+                                        </p>
+                                    </a>
+                                    <a href="https://parameterx.com" target="_blank" class="company-card" data-company="parameterx">
+                                        <div class="company-logo-link">
+                                            <img src="{% static 'images/parameterx-logo.svg' %}" alt="ParameterX" class="company-logo">
+                                        </div>
+                                        <h3 class="company-name">ParameterX</h3>
+                                        <p class="company-tagline">Cybersecurity That Protects What Matters</p>
+                                        <p class="company-description">
+                                            ParameterX is Quenchmark's cybersecurity division, built to secure businesses in a digital-first world.
+                                        </p>
+                                    </a>
+                                    <a href="https://quantmentor.com" target="_blank" class="company-card" data-company="quantmentor">
+                                        <div class="company-logo-link">
+                                            <img src="{% static 'images/quantmentor-logo.svg' %}" alt="QuantMentor" class="company-logo">
+                                        </div>
+                                        <h3 class="company-name">QuantMentor</h3>
+                                        <p class="company-tagline">Where Data Meets Market Intelligence</p>
+                                        <p class="company-description">
+                                            QuantMentor is Quenchmark's financial research and market intelligence company.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motion Block 3: Why -->
+            <div class="motion-block" data-block="3">
+                <div class="motion-stage">
+                    <div class="motion-media">
+                        <div class="motion-content">
+                            <h2 class="section-title">Why Quenchmark?</h2>
+                            <p class="section-description large">
+                                Because we don't run random businesses —<br>
+                                We run a connected ecosystem.
+                            </p>
+                            <div class="values-list glass-box">
+                                <p class="value-item">We believe the future belongs to companies that:</p>
+                                <ul class="values">
+                                    <li>Are data-driven</li>
+                                    <li>Are secure by design</li>
+                                    <li>And move fast with precision</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motion Block 4: Vision -->
+            <div class="motion-block" data-block="4">
+                <div class="motion-stage">
+                    <div class="motion-media">
+                        <div class="motion-content">
+                            <h2 class="section-title">Our Vision</h2>
+                            <p class="section-description large">
+                                To build a global technology group that creates intelligent, secure, and profitable digital systems across industries.
+                            </p>
+                            <div class="vision-statement glass-box">
+                                <p class="vision-text">Quenchmark is not a startup.</p>
+                                <p class="vision-text bold">It is a company-building engine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto-section" id="contact" data-section="contact">
+            <div class="manifesto-line">
+                <p>Ready to work with Quenchmark?</p>
+            </div>
+            <div class="manifesto-line">
+                <p>Let's build something extraordinary together.</p>
+            </div>
+            <div class="manifesto-line">
+                <p>Contact us at info@quenchmark.com</p>
+            </div>
+            <div class="manifesto-line">
+                <p>Explore opportunities with TripSoul, ParameterX, or QuantMentor.</p>
+            </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="newsletter-signup">
+                <h3 class="newsletter-title">Sign up for Quenchmark News & Stories email updates.</h3>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="EMAIL ADDRESS" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-button">SIGN UP</button>
+                </form>
+                <p class="newsletter-disclaimer">By clicking "Sign Up," you'll receive occasional emails from Quenchmark. You always have the choice to unsubscribe.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/company/leadership">Leadership</a></li>
+                        <li><a href="/digital-tech">Quenchmark Digital & Tech</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://tripsoul.com" target="_blank">TripSoul</a></li>
+                        <li><a href="https://parameterx.com" target="_blank">ParameterX</a></li>
+                        <li><a href="https://quantmentor.com" target="_blank">QuantMentor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Careers</h3>
+                    <ul class="footer-links">
+                        <li><a href="/careers/search-jobs">Search Jobs</a></li>
+                        <li><a href="/careers/our-culture">Our Culture</a></li>
+                        <li><a href="/careers/how-we-work">How We Work</a></li>
+                        <li><a href="/careers/our-functions">Our Functions</a></li>
+                        <li><a href="/careers/professional-development">Professional Development</a></li>
+                        <li><a href="/careers/candidate-experience">The Candidate Experience</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Impact</h3>
+                    <ul class="footer-links">
+                        <li><a href="/impact/approach">Approach</a></li>
+                        <li><a href="/impact/people">People</a></li>
+                        <li><a href="/impact/reporting">Reporting & Policies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">News & Stories</h3>
+                    <ul class="footer-links">
+                        <li><a href="/news">View All News</a></li>
+                        <li><a href="/news/press-releases">Press Releases</a></li>
+                        <li><a href="/stories">Stories</a></li>
+                        <li><a href="/media-library">Media Library</a></li>
+                        <li><a href="/media/contacts">Media Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="/contact">Contact Us</a>
+                <span class="separator">|</span>
+                <a href="/faq">FAQ</a>
+                <span class="separator">|</span>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="/terms-of-use">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="/responsible-disclosure">Responsible Disclosure</a>
+            </div>
+            <div class="footer-address">
+                <p>Quenchmark, 123 Innovation Drive, Tech City, TC 12345, United States</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/homepage.js' %}"></script>
+</body>
+</html>
+
