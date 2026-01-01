@@ -1,0 +1,16 @@
+{
+  "name": "quenchmark",
+  "version": "1.0.0",
+  "description": "Quenchmark website with Django backend and React frontend",
+  "scripts": {
+    "install-frontend": "cd frontend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "dev-frontend": "cd frontend && npm run dev",
+    "build": "npm run build-frontend && cd PageMain && python manage.py collectstatic --noinput",
+    "dev": "echo 'Run Django: python manage.py runserver' && echo 'Run React: npm run dev-frontend'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

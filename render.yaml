@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: quenchmark
+    env: python
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: cd PageMain && gunicorn PageMain.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: DISABLE_COLLECTSTATIC
+        value: 0
+

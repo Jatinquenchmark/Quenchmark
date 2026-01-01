@@ -310,7 +310,27 @@
         </div>
     </footer>
 
+    <!-- React Root - React components will mount here -->
+    <div id="react-root"></div>
+
+    <!-- Vanilla JS - Keep existing functionality -->
     <script src="{% static 'js/homepage.js' %}"></script>
+
+    <!-- React - Load based on environment -->
+    {% if debug %}
+    <!-- Development: React runs on Vite dev server -->
+    <script type="module" src="http://localhost:3000/src/main.jsx"></script>
+    {% else %}
+    <!-- Production: Load built React bundle -->
+    {% if react_css %}
+    {% for css_file in react_css %}
+    <link rel="stylesheet" href="{% static css_file %}">
+    {% endfor %}
+    {% endif %}
+    {% if react_main_js %}
+    <script type="module" src="{% static react_main_js %}"></script>
+    {% endif %}
+    {% endif %}
 </body>
 </html>
 
