@@ -5,6 +5,11 @@
 
 set -e  # Exit on error
 
+echo "Installing Python dependencies..."
+cd PageMain
+pip install -r requirements.txt
+cd ..
+
 echo "Building React frontend..."
 cd frontend
 npm install
