@@ -1,14 +1,9 @@
 #!/bin/bash
 
 # Build script for Render deployment
-# This script builds the React frontend and collects Django static files
+# Note: Render automatically installs Python dependencies from requirements.txt in root
 
 set -e  # Exit on error
-
-echo "Installing Python dependencies..."
-cd PageMain
-pip install -r requirements.txt
-cd ..
 
 echo "Building React frontend..."
 cd frontend
